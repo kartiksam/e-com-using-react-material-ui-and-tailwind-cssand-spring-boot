@@ -18,7 +18,7 @@ const ProductReviewCard = () => {
             </Avatar>
           </Box>
         </Grid>
-        // 2 grid
+        {/* // 2 grid */}
         <Grid item xs={9}>
           <div className="space-y-2">
             <div>

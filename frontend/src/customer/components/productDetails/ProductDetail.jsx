@@ -8,7 +8,8 @@ import Rating from "@mui/material/Rating";
 import Button from "@mui/material/Button";
 import { Grid } from "@mui/material";
 import ProductReviewCard from "./ProductReviewCard";
-
+import { Box } from "@mui/material";
+import { LinearProgress } from "@mui/material";
 const product = {
   name: "Basic Tee 6-Pack",
   price: "$192",
@@ -68,7 +69,7 @@ export default function ProductDetail() {
   const [selectedSize, setSelectedSize] = useState(product.sizes[2]);
 
   return (
-    // inbuilt claasses direct lg:px-20 or manula display:flex .classname and add file there and then use
+    // inbuilt claasses direct lg:px-20 or manula display:flex .classname and add file there and then use git nhi aata h
     <div className="bg-white lg:px-20">
       <div className="pt-6">
         <nav aria-label="Breadcrumb">
@@ -282,6 +283,7 @@ export default function ProductDetail() {
             Recent Review and Rating
           </h1>
           <div className="border p-5">
+            {/* use grid when want to split the content make grid auto m,atically split */}
             <Grid container spacing={7}>
               <Grid item xs={7}>
                 <div className="space-y-5">
@@ -290,6 +292,117 @@ export default function ProductDetail() {
                     <ProductReviewCard />
                   ))}
                 </div>
+              </Grid>
+
+              {/* 2nd grid */}
+              <Grid item xs={5}>
+                <h1 className="text-xl font-semibold ">Product Ratings</h1>
+
+                <div className="flex items-center space-x-3">
+                  <Rating value={4.6} precision={0.5} readOnly></Rating>
+                  <p className="opacity-69">56768756 Ratings</p>
+                </div>
+                <Box className="mt-5">
+                  <Grid
+                    container
+                    justifyContent="center"
+                    alignItems="center"
+                    gap={2}
+                  >
+                    <Grid item xs={2}>
+                      <p>Excellent</p>
+                    </Grid>
+                    {/* sx shorthand for applying custom css */}
+                    <Grid item xs={7}>
+                      <LinearProgress
+                        sx={{ bgcolor: "#d0d0d0", borderRadius: 4, height: 7 }}
+                        variant="determinate"
+                        value={40}
+                        color="success"
+                      />
+                    </Grid>
+                  </Grid>
+
+                  <Grid
+                    container
+                    justifyContent="center"
+                    alignItems="center"
+                    gap={2}
+                  >
+                    <Grid item xs={2}>
+                      <p>Very Good</p>
+                    </Grid>
+                    {/* sx shorthand for applying custom css */}
+                    <Grid item xs={7}>
+                      <LinearProgress
+                        sx={{ bgcolor: "#d0d0d0", borderRadius: 4, height: 7 }}
+                        variant="determinate"
+                        value={40}
+                        color="success"
+                      />
+                    </Grid>
+                  </Grid>
+
+                  <Grid
+                    container
+                    justifyContent="center"
+                    alignItems="center"
+                    gap={2}
+                  >
+                    <Grid item xs={2}>
+                      <p>Good</p>
+                    </Grid>
+                    {/* sx shorthand for applying custom css */}
+                    <Grid item xs={7}>
+                      <LinearProgress
+                        sx={{ bgcolor: "#d0d0d0", borderRadius: 4, height: 7 }}
+                        variant="determinate"
+                        value={40}
+                        color="success"
+                      />
+                    </Grid>
+                  </Grid>
+
+                  <Grid
+                    container
+                    justifyContent="center"
+                    alignItems="center"
+                    gap={2}
+                  >
+                    <Grid item xs={2}>
+                      <p>Average</p>
+                    </Grid>
+                    {/* sx shorthand for applying custom css */}
+                    <Grid item xs={7}>
+                      <LinearProgress
+                        sx={{ bgcolor: "#d0d0d0", borderRadius: 4, height: 7 }}
+                        variant="determinate"
+                        value={40}
+                        color="success"
+                      />
+                    </Grid>
+
+                  </Grid>
+                  <Grid
+                    container
+                    justifyContent="center"
+                    alignItems="center"
+                    gap={2}
+                  >
+                    <Grid item xs={2}>
+                      <p>Poor</p>
+                    </Grid>
+                    {/* sx shorthand for applying custom css */}
+                    <Grid item xs={7}>
+                      <LinearProgress
+                        sx={{ bgcolor: "#d0d0d0", borderRadius: 4, height: 7 }}
+                        variant="determinate"
+                        value={40}
+                        color="success"
+                      />
+                    </Grid>
+                  </Grid>
+                </Box>
               </Grid>
             </Grid>
           </div>
