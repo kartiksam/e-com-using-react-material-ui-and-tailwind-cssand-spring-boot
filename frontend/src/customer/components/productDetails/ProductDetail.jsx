@@ -10,6 +10,8 @@ import { Grid } from "@mui/material";
 import ProductReviewCard from "./ProductReviewCard";
 import { Box } from "@mui/material";
 import { LinearProgress } from "@mui/material";
+import HomeSectionCard from "../HomeSectionCart/HomeSectionCard";
+import { mens_kurta } from "./../data/mens_kurta";
 const product = {
   name: "Basic Tee 6-Pack",
   price: "$192",
@@ -149,7 +151,7 @@ export default function ProductDetail() {
               <div className="flex space-x-5 items-center text-lg lg:text-xl text-gray-900 mt-6">
                 <p className="font-semibold">$199</p>
                 <p className="opacity-50 line-through">$12</p>
-                <p className="text green-600 font-semibold">6%off</p>
+                <p className="text-green-600 font-semibold">6%off</p>
               </div>
               {/* Reviews */}
               {/* here we are just using inbuild tailkwind clases directly and manually dsame give anyname and aply csss to that file and add to this  */}
@@ -296,13 +298,13 @@ export default function ProductDetail() {
 
               {/* 2nd grid */}
               <Grid item xs={5}>
-                <h1 className="text-xl font-semibold ">Product Ratings</h1>
+                <h1 className="text-xl font-semibold pb-2">Product Ratings</h1>
 
                 <div className="flex items-center space-x-3">
                   <Rating value={4.6} precision={0.5} readOnly></Rating>
                   <p className="opacity-69">56768756 Ratings</p>
                 </div>
-                <Box className="mt-5">
+                <Box className="mt-5 space-y-3">
                   <Grid
                     container
                     justifyContent="center"
@@ -358,7 +360,7 @@ export default function ProductDetail() {
                         sx={{ bgcolor: "#d0d0d0", borderRadius: 4, height: 7 }}
                         variant="determinate"
                         value={40}
-                        color="success"
+                        color="orange"
                       />
                     </Grid>
                   </Grid>
@@ -378,10 +380,9 @@ export default function ProductDetail() {
                         sx={{ bgcolor: "#d0d0d0", borderRadius: 4, height: 7 }}
                         variant="determinate"
                         value={40}
-                        color="success"
+                        color="warning"
                       />
                     </Grid>
-
                   </Grid>
                   <Grid
                     container
@@ -398,13 +399,23 @@ export default function ProductDetail() {
                         sx={{ bgcolor: "#d0d0d0", borderRadius: 4, height: 7 }}
                         variant="determinate"
                         value={40}
-                        color="success"
+                        color="error"
                       />
                     </Grid>
                   </Grid>
                 </Box>
               </Grid>
             </Grid>
+          </div>
+        </section>
+
+        {/* similar products */}
+        <section className="pt-10">
+          <h1 className="py-5 text-xl font-bold">Similar Products</h1>
+          <div className="flex flex-wrap space-y-5">
+            {mens_kurta.map((item) => (
+              <HomeSectionCard product={item} />
+            ))}
           </div>
         </section>
       </div>
