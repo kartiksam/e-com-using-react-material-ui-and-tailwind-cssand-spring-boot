@@ -6,6 +6,7 @@ import Footer from "./customer/components/Footer/Footer";
 import Product from "./customer/components/product/Product";
 import ProductDetail from "./customer/components/productDetails/ProductDetail";
 import Cart from "./customer/components/cart/Cart";
+import Checkout from "./customer/components/checkout/Checkout";
 function App() {
   return (
     // need to setup the routing
@@ -15,7 +16,8 @@ function App() {
         {/* <HomePage /> */}
         {/* <Product /> */}
         {/* <ProductDetail /> */}
-        <Cart />
+        {/* <Cart /> */}
+        <Checkout />
       </div>
       <Footer />
     </div>
