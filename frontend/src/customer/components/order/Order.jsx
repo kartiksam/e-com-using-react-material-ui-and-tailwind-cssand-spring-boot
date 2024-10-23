@@ -11,7 +11,7 @@ const orderStatus = [
 ];
 const Order = () => {
   return (
-    <div>
+    <div className="px:5 lg:px-20">
       {/* to make two section  left and right */}
       {/* sx for giving manual css like we do justfycontetnt:value and in tailwind we directly use font-semibold */}
       <Grid container sx={{ justifyContent: "space-between" }}>
@@ -39,7 +39,12 @@ const Order = () => {
           </div>
         </Grid>
         <Grid item xs={9}>
-          <OrderCard />
+          <div className="space-y-5">
+            {" "}
+            {[1, 1, 1, 1, 1].map((item) => (
+              <OrderCard />
+            ))}
+          </div>
         </Grid>
       </Grid>
     </div>

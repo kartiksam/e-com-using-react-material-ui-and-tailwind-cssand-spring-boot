@@ -9,7 +9,7 @@ import { useLocation } from "react-router-dom";
 import DeliveryAddressForm from "./DeliveryAddressForm";
 import OrderSummary from "./OrderSummary";
 const steps = ["Login", "Delievery Address", "Order Summary", "Payment"];
-
+// stepper component full code here and icon are diff
 export default function Checkout() {
   const [activeStep, setActiveStep] = React.useState(0);
 
@@ -107,7 +107,9 @@ export default function Checkout() {
             </Box>
 
             {/* we creates */}
-            <div className="mt-10">{step == 2 ? <DeliveryAddressForm /> : <OrderSummary />}</div>
+            <div className="mt-10">
+              {step == 2 ? <DeliveryAddressForm /> : <OrderSummary />}
+            </div>
           </React.Fragment>
         )}
       </Box>

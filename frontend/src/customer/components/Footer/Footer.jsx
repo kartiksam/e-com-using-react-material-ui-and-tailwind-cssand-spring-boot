@@ -117,6 +117,9 @@ const Footer = () => {
           <Typography variant="body2" component="p" align="center">
             Made with love by Me.
           </Typography>
+          <Typography variant="body2" component="p" align="center">
+            Kartik Sharma-7011679411
+          </Typography>
         </Grid>
       </Grid>
     </div>

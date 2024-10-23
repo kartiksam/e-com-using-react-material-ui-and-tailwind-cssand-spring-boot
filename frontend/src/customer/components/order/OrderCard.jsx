@@ -3,7 +3,8 @@ import { Grid } from "@mui/material";
 import AdjustIcon from "@mui/icons-material/Adjust";
 const OrderCard = () => {
   return (
-    <div>
+    // className or diurect put tailwind css name or either by manual and in other class
+    <div className="p-5 shadow-lg hover:shadow-2xl border">
       <Grid container spacing={2} sx={{ justifyContent: "space-between" }}>
         {/* inside puts three itmes price name and other three sections */}
         <Grid item xs={6}>
